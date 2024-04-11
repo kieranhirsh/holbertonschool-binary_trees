@@ -2,7 +2,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_depth - finds the depth of a node of a binary tree
+ * depth_binary_tree - finds the depth of a node of a binary tree
  * @tree: a pointer to the node
  *
  * Return: the depth of the node
@@ -10,10 +10,10 @@
  */
 int depth_binary_tree(const binary_tree_t *tree)
 {
-        if ((tree == NULL) || (tree->parent == NULL))
-                return (0);
+	if ((tree == NULL) || (tree->parent == NULL))
+		return (0);
 
-        return (depth_binary_tree(tree->parent) + 1);
+	return (depth_binary_tree(tree->parent) + 1);
 }
 
 /**
@@ -24,7 +24,8 @@ int depth_binary_tree(const binary_tree_t *tree)
  * Return: a pointer to the lowest common ancestor
  *
  */
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second)
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
+		const binary_tree_t *second)
 {
 	int dfirst = 0, dsecond = 0;
 
