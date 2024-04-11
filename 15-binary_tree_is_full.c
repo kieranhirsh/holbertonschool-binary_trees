@@ -20,9 +20,9 @@ int binary_tree_is_full(const binary_tree_t *tree)
 		return (1);
 
 	if (tree->left != NULL)
-		left = binary_tree_nodes(tree->left);
+		left = binary_tree_is_full(tree->left);
 	if (tree->right != NULL)
-		right = binary_tree_nodes(tree->right);
+		right = binary_tree_is_full(tree->right);
 
 	if (left && right)
 		return (1);
